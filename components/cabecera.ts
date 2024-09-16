@@ -29,7 +29,7 @@ const valores = cabeceraI.printProps()
 export const cabecera = ()=>{
     return`
         <header>
-            <h1>${valores[0]}<h1>
+            <h1 class="flex justify-center text-cyan-600 ">${valores[0]}<h1>
         </header>
     `
 }

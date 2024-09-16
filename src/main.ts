@@ -1,4 +1,4 @@
-import './CSS/style.css'
+import  './output.css'
 import {cabecera} from '../components/cabecera'
 
 const appContainer = document.getElementById('app')
