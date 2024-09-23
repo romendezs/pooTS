@@ -1,11 +1,31 @@
-import  './output.css'
-import {cabecera} from '../components/cabecera'
+//Intente hacerle algo visual, x eso los archivos de tailwind
+//pero no me dio el tiempo x eso entregue tarde, mil disculpas :((
 
-const appContainer = document.getElementById('app')
-
-appContainer!.innerHTML = cabecera()
 //Ejercicio Cabecera
+class cabeceraTemplate{
+    private titulo:string ="Titulo por defecto"
+    private color:string  ="#89e3a0";
+    private fuente:string  = "Montserrat";
+    private alineacion:string  ="";
+  
+    public setValues(title:string, color:string, fuente:string){
+        this.titulo = title;
+        this.color = color;
+        this.fuente = fuente;
+    }
+  
+    public setAlineacion(alineacion:string){
+      this.alineacion = alineacion
+    }
+  
+    public printProps():Array<string | never>{
+        let valores:Array<string> = [this.titulo, this.color, this.fuente, this.alineacion]
+        return valores;
+    }  
+}
 
+const cabeceraI:cabeceraTemplate = new cabeceraTemplate()
+console.log(cabeceraI.printProps())
 
 //Ejercicio Calculadora
 class Calculadora{
@@ -91,7 +111,7 @@ class Cancion{
   
 }
 
-const cancion:Cancion = new Cancion("Lamento Boliviano", "buen generoxd");
+const cancion:Cancion = new Cancion("Lamento Boliviano", "Rock");
 cancion.setAutor = "Enanitos Verdes";
 cancion.getAutor;
 cancion.datosCanciones();
